@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрационные данные</title>
+
+    <link rel="stylesheet" href="DZ.css">
+    <script src="DZ.js"></script>
+</head>
+
+<body>
+    <h2>Registration Details</h2>
+    
+    <form id="registrationForm">
+        <div class="form-group">
+            <label for="university">University:</label>
+            <input type="text" id="university" name="university" required>
+            <div class="error-message" id="university-error">Пожалуйста, введите название университета</div>
+        </div>
+        
+        <div class="form-group">
+            <label for="institute">Institute:</label>
+            <input type="text" id="institute" name="institute" required>
+            <div class="error-message" id="institute-error">Пожалуйста, введите название института</div>
+        </div>
+        
+        <div class="form-group">
+            <label for="branch">Branch:</label>
+            <select id="branch" name="branch" required>
+                <option value="">-- select --</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Electrical Engineering">Electrical Engineering</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                <option value="Civil Engineering">Civil Engineering</option>
+            </select>
+            <div class="error-message" id="branch-error">Пожалуйста, выберите отделение</div>
+        </div>
+        
+        <div class="form-group">
+            <label for="degree">Degree:</label>
+            <select id="degree" name="degree" required>
+                <option value="">-- select --</option>
+                <option value="Bachelor">Bachelor</option>
+                <option value="Master">Master</option>
+                <option value="PhD">PhD</option>
+            </select>
+            <div class="radio-group">
+                <input type="radio" id="pursuing" name="degreeStatus" value="Pursuing" checked>
+                <label for="pursuing">Pursuing</label>
+                <input type="radio" id="completed" name="degreeStatus" value="Completed">
+                <label for="completed">Completed</label>
+            </div>
+            <div class="error-message" id="degree-error">Пожалуйста, выберите степень</div>
+        </div>
+        
+        <div class="form-group">
+            <label for="cpi">Average CPI:</label>
+            <input type="number" id="cpi" name="cpi" min="0" max="10" step="0.01" required>
+            <div class="radio-group">
+                <input type="radio" id="upto" name="semesterRadio" checked>
+                <label for="upto">Upto</label>
+                <input type="number" id="semester" name="semester" min="1" max="10" style="width: 50px;">
+                <label for="semester">Th Semester</label>
+            </div>
+            <div class="error-message" id="cpi-error">Пожалуйста, введите корректный CPI (0-10)</div>
+        </div>
+        
+        <div class="form-group">
+            <label for="experience">Experience:</label>
+            <input type="number" id="experience" name="experience" min="0" max="50" required>
+            <label for="experience" style="width: auto;">Years</label>
+            <div class="error-message" id="experience-error">Пожалуйста, введите корректный опыт (0-50 лет)</div>
+        </div>
+        
+        <div class="form-group">
+            <label for="website">Your Website Or Blog:</label>
+            <input type="url" id="website" name="website" placeholder="http://">
+            <div class="error-message" id="website-error">Пожалуйста, введите корректный URL (начинается с http:// или https://)</div>
+        </div>
+        
+        <div class="form-group" style="margin-left: 150px;">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+
+</body>
+</html>

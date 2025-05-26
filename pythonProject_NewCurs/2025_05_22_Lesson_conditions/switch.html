@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dayNumber = parseInt(prompt("Введи число от 1 до 7 (выведу соответствующий день недели): "));  //parseInt - текст преобразует в число
+        
+        let dayName;
+
+
+        switch (dayNumber) { //выключатель
+            case 1:             //случай (dayNumber сравнивается со случаем описанным после case)
+                dayName = "Понедельник";
+                break;          //break - разорви соединение (следующие строчки кода выполняться не будут), если не удалять то код дальше будет выполняться пока не дойдет до break
+            case 2: 
+                dayName = "Вторник";
+                break;                
+            case 3: 
+                dayName = "Среда";
+                break;
+            case 4: 
+                dayName = "Четверг";
+                break;
+            case 5: 
+                dayName = "Пятница";
+                break;
+            case 6: 
+                dayName = "Суббота";
+                break;     
+            case 7: 
+                dayName = "Воскресенье";
+                break;
+            default:                // Действие по умолчанию (если ни одна из ситуаций не сработала)
+                dayName = "Некорректный ввод!"
+        }
+        console.log(dayName)
+
+        let boolean1 = 1 == true; //сравниваются значения
+        let boolean2 = 1 === true; //сравниваются значения и ТИП данных
+        console.log(boolean1);        
+        console.log(boolean2);
+    </script>
+</body>
+</html>

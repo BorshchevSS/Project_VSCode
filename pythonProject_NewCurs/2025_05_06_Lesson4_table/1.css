@@ -1,0 +1,28 @@
+
+
+th{
+    border: 1px solid red;
+}
+
+td{
+    border: 5px solid blue;
+    /* border-bottom: 5px solid blue; */
+    padding: 0 20px;    /* Отступы от надписи внутри ячейки 0-верх и низ,  */
+    /* background-color: aqua; цвет фона*/
+}
+
+table{
+    border: 10px solid rgb(0, 0, 0);
+    border-collapse: collapse; /*  нет отступов*/
+    /* border-collapse: separate; */
+    border-spacing: 10px;
+    /* empty-cells: hide; Не показывай пустые ячейки */
+    empty-cells: show;
+}
+
+.col-1{
+    background-color: rgb(241, 123, 123);
+}
+.col-3{
+    background-color: rgb(112, 221, 157);
+}

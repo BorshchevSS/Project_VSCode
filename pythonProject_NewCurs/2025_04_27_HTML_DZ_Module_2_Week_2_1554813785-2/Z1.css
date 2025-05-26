@@ -1,0 +1,38 @@
+*{   /* Звёздочка (*) - универсальный селектор для CSS. Соответствует любому тегу. Убирая звёздочки с простых селекторов имеет тот же эффект. https://developer.mozilla.org/ru/docs/Web/CSS/Universal_selectors */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    background-color: rgb(200, 200, 200) /* Цвет фона */
+  }
+  
+  ul{
+    /* Цвета (на которые буду ссылаться при формировании фонов) */
+    --color1: #e1a1ae;
+    --color2: #ba6976;
+    --color3: #923d4b;
+  
+    background: var(--color1);
+    padding: 10px;
+  }
+  
+  ul li{
+    background:  var(--color2);
+    color: #fff;     /* Цвет шрифта */
+    margin-top: 10px;  /* Отступы между строками/пунктами */
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .num{
+    padding: 10px 14px;
+    background-color: var(--color2);
+  }
+  
+  .list{
+    background-color: var(--color3);
+    width: max-content;
+    padding: 10px 20px;
+  }

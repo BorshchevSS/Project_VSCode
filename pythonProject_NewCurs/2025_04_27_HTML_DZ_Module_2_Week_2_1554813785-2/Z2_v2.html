@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список дел</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        input[type="text"] {
+            width: 70%;
+            padding: 8px;
+        }
+
+        button {
+            padding: 8px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+        }
+
+        .delete {
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Список дел</h1>
+        <input type="text" id="taskInput" placeholder="Добавить задачу">
+        <button id="addTask">Добавить</button>
+        <ul id="taskList"></ul>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const taskInput = document.getElementById("taskInput");
+            const addTaskButton = document.getElementById("addTask");
+            const taskList = document.getElementById("taskList");
+
+            addTaskButton.addEventListener("click", function () {
+                const taskText = taskInput.value.trim();
+
+                if (taskText !== "") {
+                    const listItem = document.createElement("li");
+                    listItem.innerHTML = `
+                        <span>${taskText}</span>
+                        <span class="delete">X</span>
+                    `;
+
+                    listItem.querySelector(".delete").addEventListener("click", function () {
+                        taskList.removeChild(listItem);
+                    });
+
+                    taskList.appendChild(listItem);
+                    taskInput.value = "";
+                }
+            });
+
+            taskInput.addEventListener("keyup", function (event) {
+                if (event.key === "Enter") {
+                    addTaskButton.click();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

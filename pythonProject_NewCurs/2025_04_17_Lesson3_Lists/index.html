@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists(Листы)</title>
+    <style>
+        ul {
+            list-style-type:square;
+            /* list-style-type:disc; */
+            /* list-style-type:circle;   окружность без заливки*/
+            /* list-style-type:none; Нет маркера*/
+            list-style-position: inside;
+            /* list-style-position: outside; За пределами списка */
+        }
+
+        #ul_1{
+            list-style-type: none; 
+            margin: 0; 
+            padding: 0; 
+            overflow: hidden; 
+            background-color: #c01e1e; /* цвет фона */
+        }
+        #section_1 {
+            background-color: #8ac6b792; /* цвет фона */
+        }
+        
+        ol>li/* Для всех li которые вложены в ol*/{
+            background-color: #b68ac692; /* цвет фона */
+        }
+
+        /* Селектор ID */
+        #section_2{
+            color: blueviolet;
+        }
+
+        /* Селектор класса */
+        .red-text{
+            color: #c01e1e;
+            font-weight: bold;
+        }
+        
+        dt{
+            font-weight: 900;
+        }
+
+        dd{
+            font-style:oblique;
+            text-align: justify; /* Выравнивание по ширине */
+        }
+        
+    </style>
+</head>
+    <body>
+        <main>
+            <h1>Списки html</h1>
+            <section>
+                <h2>Нумированный список (Ordered List)</h2>
+                <ol>  <!-- ol - расшифровывается как Ordered List -Нумированный список -->
+                    <li>Элемент списка №1 (list item)</li> <!-- li - расшифровывается как list item - Элемент списка-->
+                    <li>Элемент списка №2 (list item)</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis qui, mollitia eaque rem, provident voluptate facere sequi, libero natus totam assumenda? Impedit dolore consequuntur eius debitis maiores voluptatum consectetur libero?</li>
+                </ol>
+
+                <h2>Не нумированный список (Unordered List)</h2>
+                <ul> 
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                    <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit corporis possimus ratione facere ipsum id perferendis soluta quidem nesciunt, officia ad, quod quis vitae excepturi itaque error. Sequi, provident reprehenderit.</li>
+                </ul>
+
+                <h2>Список описание (description list)</h2>
+                <dl> 
+                    <dt>Coffee</dt> 
+                    <dd>напиток из жареных и перемолотых зёрен кофейного дерева или кофейного куста.</dd> <!-- description defines -->
+                    <dt>Milk</dt>   
+                    <dd> питательная жидкость, вырабатываемая молочными железами самок млекопитающих во время лактации. Естественное назначение молока — вскармливание[2] потомства (в том числе и у человека), которое ещё не способно переваривать другую пищу. В настоящее время молоко входит в состав многих продуктов, используемых человеком, а его производство стало крупной отраслью промышленности.
+                        Молоко — многокомпонентная полидисперсная система, в которой все составные вещества находятся в тонкодисперсном состоянии, что обеспечивает молоку жидкую консистенцию.
+                        Технический регламент определяет молоко как продукт нормальной физиологической секреции молочных желез сельскохозяйственных животных, полученный от одного или нескольких животных в период лактации при одном и более доении, без каких-либо добавлений к этому продукту1 июня отмечается Всемирный день молока.</dd>
+                  </dl>
+            </section>
+
+            <section>
+                <h2>Не нумированный список (Unordered List)</h2>
+
+                <!-- Не нумированный список (Unordered List) -->
+                <ul> 
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                </ul>
+            </section>
+
+            <section ID="section_1">
+                <h2>Нумированный список, вложенный список НЕ нумированный</h2>
+                    <ol>
+                        <li>Element 1 Ordered List
+                            <ul ID="ul_1">
+                                <li>Element 1.1 Unordered List</li>
+                                <li>Element 1.2 Unordered List</li>
+                            </ul>
+                        </li>
+                        <li>Element 2 Ordered List
+                            <ul style="list-style-type: circle">
+                                <li>Element 2.1 Unordered List</li>
+                                <li>Element 2.2 Unordered List</li>
+                            </ul>
+                        </li>
+                    </ol>
+            </section>
+
+
+            <section ID="section_2">
+                <h2>Нумированный список, вложенный список НЕ нумированный</h2>
+                    <ol>
+                        <li>Element 1 Ordered List
+                            <ul class="red-text">
+                                <li>Element 1.1 Unordered List</li>
+                                <li>Element 1.2 Unordered List</li>
+                            </ul>
+                        </li>
+                        <li>Element 2 Ordered List
+                            <ul>
+                                <li>Element 2.1 Unordered List</li>
+                                <li>Element 2.2 Unordered List</li>
+                            </ul>
+                        </li>
+                    </ol>
+            </section>
+
+            <section>
+                <h2> <a href="https://www.w3schools.com/html/html_lists_ordered.asp"">Разные способы нумирации</a></h2>
+                    <ol type="A">
+                        <li>Element 1 Ordered List</li>
+                        <li>Element 2 Ordered List</li>
+                        <li>Element 3 Ordered List</li>
+                        <li>Element 4 Ordered List</li>
+                    </ol>
+
+                    <ol type="a">
+                        <li>Element 1 Ordered List</li>
+                        <li>Element 2 Ordered List</li>
+                        <li>Element 3 Ordered List</li>
+                        <li>Element 4 Ordered List</li>
+                    </ol>
+
+                    <ol type="I">
+                        <li>Element 1 Ordered List</li>
+                        <li>Element 2 Ordered List</li>
+                        <li>Element 3 Ordered List</li>
+                        <li>Element 4 Ordered List</li>
+                    </ol>
+
+                    <ol type="i" start="5"> Изменил начало
+                        <li>Element 1 Ordered List</li>
+                        <li>Element 2 Ordered List</li>
+                        <li>Element 3 Ordered List</li>
+                        <li>Element 4 Ordered List</li>
+                    </ol>
+            </section>
+        </main>
+    </body>
+</html>

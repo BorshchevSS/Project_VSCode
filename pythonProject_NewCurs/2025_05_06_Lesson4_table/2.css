@@ -1,0 +1,60 @@
+.col_1{
+    color: black;
+}
+
+.col_one{
+    text-align: left;
+    color: rgb(0, 0, 0)
+}
+
+.col_2{
+    background-color: aqua;
+}
+.col_3{
+    background-color: rgb(121, 216, 113);
+
+}
+.col_4{
+    background-color: rgb(223, 211, 103);
+}
+.col_5{
+    background-color: rgb(230, 112, 112);
+}
+
+table{
+    text-align: center;
+    border-collapse: collapse;
+    color: white
+}
+
+.tr_1{
+    border-bottom: 5px solid rgb(255, 255, 255);
+}
+
+.str_f{
+    font-weight:900;
+    border-top: 5px solid rgb(255, 255, 255);
+}
+
+td, th{
+    padding: 0 20px;
+}
+
+.box{
+    width:  calc(50% - 2px);
+    border: 1px solid black;
+    box-sizing: border-box;    /* Все до границ блока включено в его границы */
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: justify;    /* Распределение текста по боксу равномерно */
+    border-radius: 30%;    /* Закругление рамки */
+    box-shadow: 10px 5px 10px black;     /* Тень блока вправо и вниз и размытие и цвет тени */
+    text-shadow: 1px 1px 1px rgb(110, 56, 56);
+    /* overflow: scroll; */
+    display: inline-block;     /* Изменение строчного и блочного типа */
+}
+
+p{
+
+}

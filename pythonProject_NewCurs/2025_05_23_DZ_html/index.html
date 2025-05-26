@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Позиционирование. Верстка блоками</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        #header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        #nav {
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+        }
+        
+        #nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        #nav li {
+            display: inline;
+        }
+        
+        #nav a {
+            color: rgb(226, 80, 80);
+            text-decoration: none;
+        }
+        
+        .main-container {
+            display: flex;
+            flex: 1;
+        }
+        
+        #article {
+            flex: 3;
+            padding: 20px;
+            background-color: #e9ecef;
+        }
+        
+        #article section {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        #aside {
+            flex: 1;
+            padding: 20px;
+            background-color: #dee2e6;
+        }
+        
+        #aside section {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        #footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>Позиционирование. Верстка web-страниц блоками</h1>
+    </header>
+    
+    <nav id="nav">
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </nav>
+    
+    <div class="main-container">
+        <article id="article">
+            <section>
+                <h2>Заголовок статьи</h2>
+                <p>Содержание статьи...</p>
+            </section>
+            <section>
+                <h2>Еще одна секция</h2>
+                <p>Дополнительный контент...</p>
+            </section>
+            <section>
+                <h2>Еще одна секция</h2>
+                <p>Дополнительный контент...</p>
+            </section>
+        </article>
+        
+        <aside id="aside">
+            <section>
+                <h3>Боковая панель</h3>
+                <p>Контент боковой панели...</p>
+            </section>
+            <section>
+                <h3>Дополнительная информация</h3>
+                <p>Еще какой-то контент...</p>
+            </section>
+        </aside>
+    </div>
+    
+    <footer id="footer">
+        <p>© 2025 Все права защищены</p>
+    </footer>
+</body>
+</html>
