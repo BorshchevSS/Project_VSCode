@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping an Array</title>
+
+        <script>
+            window.onload = function(){  //window.onload после того как окно загрузится выполни функцию {}  сделает неважным расположение ссылки на script
+                const fruits = ["Banana", "Orange", "Apple", "Mango", "Vanki"];
+                let fLen = fruits.length;
+                fruits.sort() //Сортировка элементов 
+
+                let text = "<ul>";
+                for (let i = 0; i < fLen; i++) {
+                //text += "<li>" + fruits[i] + "</li>";
+                text += `<li>${fruits[i]}</li>` 
+                }
+                text += "</ul>";
+
+                document.getElementById("demo").innerHTML = text;  //Текст + разметка
+                //document.getElementById("demo").innerText = text;  //Если не нужна разметка
+                console.log(fruits.toString())
+            }
+            console.log()
+            document.write(["Banana", "Orange", "Apple", "Mango", "Vanki"].toString());
+    </script>
+
+</head>
+<body>
+    <h1>JavaScript Arrays</h1>
+<h2>Looping an Array</h2>
+    <p id="demo"></p>
+
+
+</body>
+</html>

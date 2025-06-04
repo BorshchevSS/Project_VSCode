@@ -42,25 +42,25 @@ document.write("<br> Нечетных чисел: " + oddNumbers);
 function askNumber (){
 //        num = parseInt(prompt("Введи число: "));
         num = prompt("Введи число: ");
-//        checkNumber (num); //Проверка введённого значения
+        checkNumber (num); //Проверка введённого значения
         num = Number(num);
     return num
 }
 
 function checkNumber (num){
     // Проверка на отмену или пустой ввод
-    if (num === null || num.trim() === "") {
+    if (num === null || num.trim() === "") { //Проверка на пустую строку
         alert("Вы отменили ввод или ввели пустую строку. Пожалуйста, введите число.");
         askNumber();
     }
     
-     chislo_i = Number(chislo_i);
+    chislo_i = Number(num);
                         
-//     // Проверка на число
-//     if (isNaN(chislo_i)) {
-//         alert("Это не число. Пожалуйста, введите число.");
-//         askNumber();
-//     }
+    // Проверка на число
+    if (isNaN(chislo_i)) {
+        alert("Это не число. Пожалуйста, введите число.");
+        askNumber();
+    }
 
     return
 }
