@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "../2025_06_03_L_JS_Arrays(Массивы)/task1.js"></script> <!-- html относительные ссылки (не работает из-за window.onload = function(){})-->
+    <script src="task1.js"></script>
+    <script src="task2.js"></script>
+</head>
+    <body>
+        <h1>Задание 1</h1>
+            <p>Создать массив из 10 случайных чисел и написать несколько функций для работы с ним.</p>
+                <p>1. Функция принимает массив и выводит его на экран.</p>
+                <button onclick="generateArray (10)">Start</button>
+                <div id="task1_1"></div><br>
+
+                <p>2. Функция принимает массив и выводит только четные элементы.</p>
+                <button onclick="chetElementArray(generateArray(10))">Start</button>
+                <div id="task1_2"></div><br>
+
+                <p>3. Функция принимает массив и возвращает сумму всех элементов массива.</p>
+                <button onclick="sumElementArray(generateArray(10))">Start</button>
+                <div id="task1_3"></div><br>
+
+                <p>4. Функция принимает массив и возвращает его максимальный элемент.</p>
+                <button onclick="maxElementArray(generateArray(10))">Start</button>
+                <div id="task1_4"></div><br>
+
+                <p>5. Функция добавления нового элемента в массив по указанному индексу.</p>
+                <button onclick="changeElementArray(generateArray(10))">Start</button>
+                <div id="task1_5"></div><br>
+
+
+                <p>6. Функция удаления элемента из массива по указанному индексу.</p>
+                <button onclick="dellElementArray(generateArray(10))">Start</button>
+                <div id="task1_6"></div><br>
+
+        <h1>Задание 2</h1>
+            <p>Создать еще один массив из 5 случайных чисел и написать следующие функции.</p>
+                <button onclick="printSourceArrays ()">Показать исходные массивы</button>
+                <div id="array1"></div><br>
+                <div id="array2"></div><br>
+
+                <p>1. Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из двух массивов без повторений.</p>
+                <button onclick="uniqueValuesArray (array1, array2)">Start</button>
+                <div id="task2_1"></div><br>
+
+                <p>2. Функция принимает 2 массива и возвращает новый массив, в котором собраны общие элементы (то есть элементы, которые встречаются и в первом и во втором массивах) без повторений.</p>
+                <button onclick="identicalValuesArray (array1, array2)">Start</button>
+                <div id="task2_2"></div><br>
+
+                <p>3. Функция принимает 2 массива и возвращает новый массив, в котором собраны все элементы из первого массива, которых нет во втором массиве.</p>
+                <button onclick="getUniqueElements (array1, array2)">Start</button>
+                <div id="task2_3"></div><br>
+        
+                <h1>Задание 3</h1>
+            <p>Создать массив фруктов и отсортировать его по алфавиту. Написать следующие функции.</p>
+                <p>1. Вывод на экран с помощью document.write() в виде списка (с помощью тегов ul и li).</p>
+                <button onclick="displayFruitsAsList(fruits)">Start</button>
+                <script src="task3.js"></script>
+
+                <p>2. Поиск фрукта в массиве. Функция принимает название фрукта и возвращает индекс найденного элемента или -1, если не найден. Поиск должен быть нерегистрозависимым.</p>
+                <button onclick="printNumOrText(findFruitIndex(fruits), `task3_2`)">Start</button>
+                <script src="task3.js"></script>
+                <div id="task3_2"></div><br>
+        
+                <p></p>
+    </body>
+</html>

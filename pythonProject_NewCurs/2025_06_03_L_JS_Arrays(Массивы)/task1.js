@@ -31,6 +31,6 @@ chetElementMassive (massive);
 
 //Публикуем результат в виде строки в соответствующий ID
     function print(array, taskN){ //Передаем массив и ID в виде текста
-    document.getElementById(taskN).innerText = array.toString();
+        document.getElementById(taskN).innerText = array.toString();
 }
 }
