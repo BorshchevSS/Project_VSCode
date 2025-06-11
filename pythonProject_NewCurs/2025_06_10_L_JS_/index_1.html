@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Objects</h1>
+<h2>Object Methods</h2>
+<p>A method is a function definition stored as a property value.</p>
+
+<p id="demo"></p>
+
+<script>
+
+    //Литерал - какое-то конкретное значение (бывают числовой, строковый или объектный литерал)
+
+const person = { //Начинка фигурных скобок называется объектным литералом
+//ключь: значение
+  firstName: "John",
+  lastName: "Doe",
+  age: function(birthdate){
+    let result;
+    let now = new Date(2025, 6, 10)
+    result = new Date(now - birthdate);
+    return result.getFullYear()-1970;
+  },
+  id: 5566,
+  fullName: function() {
+    return this.firstName + " " + this.lastName + " " + this.id;
+  }
+};
+
+
+    let str = `Test ${person.firstName} `//интерполяция строк (в строку вживляют переменную)
+    alert(str)
+
+const person2 = {
+  firstName: "John2",
+  lastName: "Doe2",
+  age: 23,
+  id: 55662,
+  fullName: function() {
+    return this.firstName + " " + this.lastName + " " + this.id;
+  }
+};
+
+console.log(person.fullName());
+console.log(person.age(new Date(2000, 1, 1)));
+console.log(person2.fullName());
+document.getElementById("demo").innerHTML = person.fullName();
+</script>
+</body>
+</html>
