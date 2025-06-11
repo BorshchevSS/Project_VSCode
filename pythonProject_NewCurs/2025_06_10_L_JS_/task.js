@@ -62,6 +62,23 @@ function biasRectangle (bias) {
 //____________________________________________________________________________________________
 
 
+//11. Функция смещения прямоугольника и по оси X и по оси Y. Она принимает объект-прямоугольник и два значения: сдвиг по оси X и сдвиг по оси Y.
+function biasRectangleXY (biasX, biasY){
+    rectangle.leftTopX = rectangle.leftTopX + biasX;
+    rectangle.rightBottonX = rectangle.rightBottonX + biasX;
+    rectangle.leftTopY = rectangle.leftTopY + biasY;
+    rectangle.rightBottonY = rectangle.rightBottonY + biasY;
+}
+
+biasRectangleXY (3, 2); // Сдвиг влево на 3
+console.log(rectangle.info());
+console.log(rectangle.width());
+console.log(rectangle.length());
+console.log(rectangle.perimeter());
+
+
+
+
 //12. Функция для проверки, находится ли точка внутри прямоугольника. Она принимает объект-прямоугольник и координаты точки.
 function checkDot (topX, topY){
     rectangle.leftTopX
