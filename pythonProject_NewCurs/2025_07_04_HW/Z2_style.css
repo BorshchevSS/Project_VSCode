@@ -1,0 +1,38 @@
+        body {
+            /* font-family: Arial, sans-serif; */
+            padding: 20px;
+        }
+        
+        /* .tree {
+            list-style-type: none;
+            padding-left: 10px;
+        } */
+        
+        .tree li {
+            /* position: relative; */
+            /* padding-left: 15px; */
+            /* margin: 5px 0; */
+            cursor: pointer; /* Курсор меняется при наведении */
+        }
+        
+
+
+        /* Отображение структуры дерева до развёртывания */
+        .tree li:before {
+            content: "📁 ";
+        }
+        /* После развертывания */
+        .tree li.collapsed:before {
+            content: "📂 ";
+        }
+        
+        /* при наведении курсора жирным шрифтом будет выделяться только та строка, на которую непосредственно наведен курсор, а не все вложенные элементы. */
+        /* **Добавлены элементы <span>** внутри каждого <li>, чтобы текст был обернут в отдельный элементИзменен CSS селекторор** для hover-эффекта */
+        .tree li > span:hover {
+            font-weight: bold;
+        }
+        
+        .tree li.collapsed > ul {
+            display: none;
+        }
+        
