@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-container {
+    margin: 30px 0;
+    line-height: 1.6;
+}
+
+.palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.color-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid #eee;
+    transition: transform 0.2s;
+}
+
+.color-box:hover {
+    transform: scale(1.1);
+    border-color: #ccc;
+}
+
+.color-box.active {
+    border-color: #000;
+    transform: scale(1.1);
+}
