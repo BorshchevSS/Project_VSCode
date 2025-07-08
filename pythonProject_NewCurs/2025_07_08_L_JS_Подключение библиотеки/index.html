@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.7.1.slim.min.js"></script> <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>  -->
+     <script src="../jquery-ui-1.14.1.custom/jquery-ui.min.js"></script>
+    <title>jQuery - Demo</title>
+    <style>
+        .text-blue{
+            color: blue;
+        }
+
+        .background-grey{
+            background-color:grey
+        }
+    </style>
+<script>
+$(document).ready(function(){
+//   $("p").click(function(){
+//     $(this).hide();
+//   });
+    $("button").on("dblclick", function(){
+        // $("p").toggle().css('background-color', 'red');
+         $("p").css('color', 'red');
+    });
+
+    $("button").on("dblclick", function(){
+        //$("p").text('lorem ipsum'); //запись значения
+        console.log($("p").text()); // чтение значения текста в "p"
+        const inputVal = $("#name").val();
+        console.log(inputVal); // чтение значения текста введённого в управляющий элемент "input"
+        const type = $("#name").attr("type");
+        console.log(type); 
+        //$("p:first").append("New text");
+         $("p:first").append($("<h1></h1>").text("Header 1"));
+                  $("p:first").append($("<h1>").text("Header 1").addClass("text-blue background-grey"));
+    });
+});
+</script>
+</head>
+    <body>
+        <!-- https://www.w3schools.com/jquery/jquery_syntax.asp -->
+         <!-- https://www.w3schools.com/jquery/jquery_selectors.asp -->
+<button>Click</button>
+<input type="text" id="name">
+<p id="p1">If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+    </body>
+</html>
