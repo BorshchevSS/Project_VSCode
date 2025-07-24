@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.remember-me input {
+    margin-right: 10px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+button:hover {
+    background-color: #45a049;
+}
+.forgot-password {
+    color: #555;
+    text-decoration: none;
+}
+.forgot-password:hover {
+    text-decoration: underline;
+}
+.greeting {
+    margin-top: 20px;
+    font-size: 18px;
+    display: none;
+}

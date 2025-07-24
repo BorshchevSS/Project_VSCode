@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UserForm</title>
+    <link rel="stylesheet" href="Z3.css">
+
+</head>
+    <body>
+            <form id="userForm">
+            <div class="form-group">
+                <label for="firstname">Firstname:</label>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="lastname">Lastname:</label>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Gender:</label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male" style="display: inline; font-weight: normal;">Male</label>
+                    
+                    <input type="radio" id="female" name="gender" value="Female" style="margin-left: 15px;">
+                    <label for="female" style="display: inline; font-weight: normal;">Female</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Skills:</label>
+                <div class="skills-group">
+                    <div class="skill-option">
+                        <input type="checkbox" id="html" name="skills" value="HTML">
+                        <label for="html" style="display: inline; font-weight: normal;">HTML</label>
+                    </div>
+                    <div class="skill-option">
+                        <input type="checkbox" id="css" name="skills" value="CSS">
+                        <label for="css" style="display: inline; font-weight: normal;">CSS</label>
+                    </div>
+                    <div class="skill-option">
+                        <input type="checkbox" id="js" name="skills" value="JS">
+                        <label for="js" style="display: inline; font-weight: normal;">JS</label>
+                    </div>
+                    <div class="skill-option">
+                        <input type="checkbox" id="php" name="skills" value="PHP">
+                        <label for="php" style="display: inline; font-weight: normal;">PHP</label>
+                    </div>
+                    <div class="skill-option">
+                        <input type="checkbox" id="cpp" name="skills" value="C++">
+                        <label for="cpp" style="display: inline; font-weight: normal;">C++</label>
+                    </div>
+                    <div class="skill-option">
+                        <input type="checkbox" id="java" name="skills" value="JAVA">
+                        <label for="java" style="display: inline; font-weight: normal;">JAVA</label>
+                    </div>
+                    <div class="skill-option">
+                        <input type="checkbox" id="csharp" name="skills" value="C#">
+                        <label for="csharp" style="display: inline; font-weight: normal;">C#</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit">Save</button>
+            <button type="submitNewWindows">Save New window</button>
+        </form>
+        
+
+
+        <div id="result" style="display: none;">
+            <h2>Result:</h2>
+            <table id="resultTable">
+                <tr>
+                    <th>Firstname</th>
+                    <td id="resultFirstname"></td>
+                </tr>
+                <tr>
+                    <th>Lastname</th>
+                    <td id="resultLastname"></td>
+                </tr>
+                <tr>
+                    <th>Birthday</th>
+                    <td id="resultBirthday"></td>
+                </tr>
+                <tr>
+                    <th>Gender</th>
+                    <td id="resultGender"></td>
+                </tr>
+                <tr>
+                    <th>Country</th>
+                    <td id="resultCountry"></td>
+                </tr>
+                <tr>
+                    <th>City</th>
+                    <td id="resultCity"></td>
+                </tr>
+                <tr>
+                    <th>Skills</th>
+                    <td id="resultSkills"></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+        <script src="Z3.js"></script>
+</html>
